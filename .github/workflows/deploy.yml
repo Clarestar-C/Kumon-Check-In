@@ -10,6 +10,12 @@ permissions:
   pages: write
   id-token: write
 
+# Project files live in the kumon-checkin/ subfolder, so run every
+# command there.
+defaults:
+  run:
+    working-directory: kumon-checkin
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,11 +25,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: kumon-checkin/package-lock.json
       - run: npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: kumon-checkin/dist
 
   deploy:
     needs: build
