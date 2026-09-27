@@ -1,0 +1,1 @@
+{"background_color":"#ffffff","description":"Offline student check-in and check-out for Kumon centres.","display":"standalone","icons":[{"purpose":"any","sizes":"any","src":"icon.svg","type":"image/svg+xml"}],"name":"Kumon Student Check-In","orientation":"portrait","scope":".","short_name":"Check-In","start_url":".","theme_color":"#1d4ed8"}
